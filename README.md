@@ -14,8 +14,8 @@ All routing is done within ``src/main.py`` file, which can import all the other 
 This way port 12000 in this case would be visible to the LAN network. Note that in order for the API to be accessible outside the local network, port mapping on your local router is required.
 
 **Step 3**: Now we can experiment sending a cURL requests like this:  
-`` curl -X POST -H "Content-Type: application/json" -d '{"query": "test"}' http://172.17.0.1:12000/classify ``
+`` curl -X POST -H "Content-Type: application/json" -d '{"query": "test"}' http://0.0.0.0:12000/classify ``
 
 or like this:  
   
-``curl -X GET http://172.17.0.1:12000``
+``curl -X GET http://0.0.0.0:12000``
